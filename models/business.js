@@ -1,8 +1,6 @@
-const { name } = require("ejs");
-const { Timestamp } = require("mongodb");
 const mongoose = require("mongoose");
 
-const businessSchema = new mongoose.schema(
+const businessSchema = new mongoose.Schema(
   {
     name: String,
     category: String,
@@ -10,7 +8,7 @@ const businessSchema = new mongoose.schema(
     location: String,
     phoneNumber: String,
     website: String,
-    isVerfied: {
+    isVerified: {
       type: Boolean,
       defult: false,
     },
@@ -19,4 +17,4 @@ const businessSchema = new mongoose.schema(
 );
 
 const Business = mongoose.model("Business", businessSchema);
-module.export = Business;
+module.exports = Business;
